@@ -1,0 +1,11 @@
+<h1>New game</h1>
+
+<%= @random_array %>
+
+<form action="/score" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :random_array, @random_array %>
+  <input type="text" name="word" placeholder="What's the longest word you can find">
+  <input type="submit">
+</form>
+
